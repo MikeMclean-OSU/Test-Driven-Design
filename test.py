@@ -22,5 +22,9 @@ class TestPasswordFunc(unittest.TestCase):
         """Test to check if passwords of length 21 fail"""
         self.assertFalse(check_pwd("P@ssw0rdP@ssw0rd12345"))
 
+    def test5(self):
+        """Test to check if passwords with no lowercase letters are rejected"""
+        self.assertFalse(check_pwd("P@SSW0RD"))
+
 if __name__ == '__main__':
     unittest.main()
