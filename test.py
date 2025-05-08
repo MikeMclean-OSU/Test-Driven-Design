@@ -12,8 +12,15 @@ class TestPasswordFunc(unittest.TestCase):
 
     def test2(self):
         """Test to check if passwords of length 8 pass"""
-        self.assertTrue(check_pwd("12345678"))
+        self.assertTrue(check_pwd("P@ssw0rd"))
 
+    def test3(self):
+        """Test to check if passwords of length 20 pass"""
+        self.assertTrue(check_pwd("P@ssw0rdP@ssw0rd1234"))
+
+    def test4(self):
+        """Test to check if passwords of length 21 fail"""
+        self.assertFalse(check_pwd("P@ssw0rdP@ssw0rd12345"))
 
 if __name__ == '__main__':
     unittest.main()
