@@ -3,4 +3,4 @@
 def check_pwd(pwd):
     """Fucntion to verify a password"""
 
-    return True
+    return False
