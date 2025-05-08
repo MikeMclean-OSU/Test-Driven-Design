@@ -6,4 +6,11 @@ from check_pwd import check_pwd
 class TestPasswordFunc(unittest.TestCase):
     """Test suite for the password checking function"""
 
-    pass
+    def test1(self):
+        """Test to check if an empty password is valid"""
+
+        self.assertFalse(check_pwd(""))
+
+
+if __name__ == '__main__':
+    unittest.main()
