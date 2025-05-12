@@ -46,5 +46,9 @@ class TestPasswordFunc(unittest.TestCase):
         """Test to check if passwords without a symbol are rejected"""
         self.assertFalse(check_pwd("Passw0rd"))
 
+    def test11(self):
+        """Test to check if passwords with only symbols are rejected"""
+        self.assertFalse(check_pwd("~`!@#$%^&*()_+-="))
+
 if __name__ == '__main__':
     unittest.main()
