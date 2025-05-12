@@ -26,5 +26,13 @@ class TestPasswordFunc(unittest.TestCase):
         """Test to check if passwords with no lowercase letters are rejected"""
         self.assertFalse(check_pwd("P@SSW0RD"))
 
+    def test6(self):
+        """Test to check if passwords with a lowercase letter is accepted"""
+        self.assertTrue(check_pwd("p@SSW0RD"))
+
+    def test7(self):
+        """Test to check if passwords with only lowercase letters are rejected"""
+        self.assertFalse(check_pwd("p@ssw0rd"))
+        
 if __name__ == '__main__':
     unittest.main()
