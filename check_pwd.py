@@ -2,7 +2,8 @@
 
 def check_pwd(pwd):
     """Fucntion to verify a password"""
-    if len(pwd) < 7 or len(pwd) > 20:
+
+    if len(pwd) < 8 or len(pwd) > 20:
         return False
     if not any(char.islower() for char in pwd):
         return False

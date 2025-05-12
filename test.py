@@ -38,5 +38,13 @@ class TestPasswordFunc(unittest.TestCase):
         """Test to check if passwords with no digits are rejected"""
         self.assertFalse(check_pwd("P@ssword"))
 
+    def test9(self):
+        """Test to check if passwords with only numbers are rejected"""
+        self.assertFalse(check_pwd("12345678"))
+
+    def test10(self):
+        """Test to check if passwords without a symbol are rejected"""
+        self.assertFalse(check_pwd("Passw0rd"))
+
 if __name__ == '__main__':
     unittest.main()
