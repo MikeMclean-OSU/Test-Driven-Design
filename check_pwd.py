@@ -8,5 +8,7 @@ def check_pwd(pwd):
         return False
     if not any(char.isupper() for char in pwd):
         return False
+    if not any(char.isnumeric() for char in pwd):
+        return False
 
     return True
